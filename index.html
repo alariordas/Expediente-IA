@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juego de Misterio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Overlay de carga -->
+  <div id="loadingOverlay" class="overlay">
+    <div class="overlay-content">
+      <p id="loadingStep">Cargando historia...</p>
+      <p id="loadingTip">Tip: Presta atención a cada detalle.</p>
+    </div>
+  </div>
+
+  <!-- Toda la aplicación dentro de este contenedor para aplicar blur -->
+  <div id="app">
+    <!-- PANEL IZQUIERDO: Inicio, Escena y Libreta de objetivos -->
+    <aside class="sidebar left">
+      <button class="sidebar-toggle">☰</button>
+      <h2>Inicio</h2>
+      <p>Aqui la que dice "inicio":</p>
+      <section class="scene">
+        <h3>Escena</h3>
+        <p>Aqui se debe de cargar la parte del json que dice "scenario:"</p>
+      </section>
+      <section class="notebook">
+        <h3>Objetivos</h3>
+        <ul>
+          <li class="objective">🔪 Arma</li>
+          <li class="objective">📍 Lugar</li>
+          <li class="objective">⏰ Hora</li>
+          <li class="objective">🕵️‍♂️ Asesino</li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- PANEL CENTRAL: Chat -->
+    <main class="chat center">
+      <div class="chat-messages"></div>
+      <div class="chat-input">
+        <div class="chips"></div>
+        <div id="attemptsCounter" class="attempts"></div>
+        <span style="display: flex;">
+          <input id="message" type="text" placeholder="Escribe aquí tu mensaje…" />
+          <button id="send"><img src="arrow-circle-up-disabled.svg" alt="Enviar"></button>
+        </span>
+      </div>
+    </main>
+
+    <!-- PANEL DERECHO: Lista de personajes -->
+    <aside class="sidebar right">
+      <button class="sidebar-toggle">☰</button>
+      <h2>Personajes</h2>
+      <div class="characters-list" id="characl"></div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
