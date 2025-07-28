@@ -1,6 +1,5 @@
 # app/model.py
-from pydantic import BaseModel, Field
-import datetime
+from pydantic import BaseModel
 from typing import List, Optional, Dict
 
 class Game(BaseModel):

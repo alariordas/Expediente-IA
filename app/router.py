@@ -4,14 +4,12 @@ import tempfile
 import uuid
 from fastapi import FastAPI, HTTPException, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
 from pollinations import Image as PollinationsImage
 from PyPDF2 import PdfReader
 import pathlib
 import datetime
 import json
 from google import genai
-from typing import Any, List, Optional, Dict
 import model
 
 
